@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CS EXERCISE 1: NUMBER SWAPPER</title>
+</head>
+<body>
+    <p id="input1"> </p>
+    <p id="input2"> </p>
+
+    <p id="before"> </p>
+    <p id="after"> </p>
+
+    <p id="sum"> </p>
+    <script>
+        var num1 =  prompt("Enter a first number: ");
+        var num2 = prompt("Enter a second number: ");
+
+        document.getElementById("input1").innerHTML = "Enter a first number: " + num1; 
+        document.getElementById("input2").innerHTML = "Enter a second number: " + num2; 
+
+        document.getElementById("before").innerHTML = "<br>" + "The inputs before swapping: " + num1 + " and " + num2 + ".";
+
+        [num1, num2] = [num2, num1];
+
+        document.getElementById("after").innerHTML = "After swapping: " + num1 + " and " + num2 + ".";
+
+        var sum = parseInt(num1) + parseInt(num2);
+
+        document.getElementById("sum").innerHTML = "The sum of the two numbers is " + sum + ".";
+    </script>
+</body>
+</html>
